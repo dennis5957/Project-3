@@ -1,0 +1,93 @@
+<style>
+    #nav {
+        background-color: var(--warning);
+        postition: fixed;
+        top: 0;
+    }
+
+    #signoutButton,
+    #menuButton {
+        color: var(--warning);
+    }
+
+    #signoutButton {
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        font-size: 1rem;
+    }
+
+    #menuButton {
+        margin: 5px;
+    }
+
+    #menuModal {}
+
+    i {
+        margin-right: 10px;
+    }
+
+    .list-group-item {
+        font-size: 1.5rem;
+    }
+
+    .list-group-item:hover {
+        color: black;
+    }
+
+    .list-group-item.active {
+        background-color: var(--warning);
+        color: var(--light);
+    }
+</style>
+
+
+<div id="nav">
+    <button id="menuButton" type="button" class="btn btn-lg btn-dark" data-toggle="modal" data-target="#menuModal">
+        <i class="fas fa-bars"></i>
+    </button>
+    <span class="text-secondary">{{ appName }}</span>
+    <div class="modal fade" id="menuModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <ul class="list-group">
+                    <a class="list-group-item list-group-item-dark  home" href="/">
+                        <i class="fas fa-home"></i> Home</a>
+
+                    <a class="list-group-item  list-group-item-dark report" href="/report">
+                        <i class="far fa-chart-bar"></i> Expiration</a>
+
+                    <a class="list-group-item  list-group-item-dark  scan" href="/scan">
+                        <i class="fas fa-barcode"></i> Add Items</a>
+
+                    <a class="list-group-item  list-group-item-dark  map" href="/map">
+                        <i class="fas fa-map-marker-alt"></i> Find a grocery Store</a>
+
+                    <a class="list-group-item   list-group-item-dark inventory" href="/inventory">
+                        <i class="fas fa-shopping-cart"></i> Inventory</a>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <a id="signoutButton" class="btn btn-lg btn-dark" href="#">
+        <i class="fas fa-sign-out-alt"></i>
+    </a>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $(".active").removeClass("active").removeAttr("disabled");
+        $(`.{{activeNav}}`).addClass("active").attr("disabled");
+        $("#signoutButton").click(function () {
+            sessionStorage.clear();
+            window.location.reload();
+        });
+
+        if (sessionStorage.getItem("auth") === null) {
+            $("#signoutButton").hide();
+        } else {
+            $("#signoutButton").show();
+        }
+
+    });
+</script>

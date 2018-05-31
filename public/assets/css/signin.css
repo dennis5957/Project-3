@@ -1,0 +1,13 @@
+#signupForm {
+    padding: 30px;
+}
+
+#signupButton {
+    display: inline-block;
+    margin-left: 1vw;
+}
+
+#signupMessage, #signinMessave {
+    display: block;
+}
+

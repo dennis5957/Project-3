@@ -1,0 +1,3 @@
+INSERT INTO `foodfficiency`.`items`(`id`,`userId`,`upc`,`name`,`expires`, `price`)VALUES(null, 1, '452458514621', "Walnuts-8oz", "2018-05-01 13:07:17", 3.23);
+INSERT INTO `foodfficiency`.`items`(`id`,`userId`,`upc`,`name`,`expires`, `price`)VALUES(null, 1, '245478452135', "Fruit Loops -14oz", "2018-05-03 13:33:17", 3.88);
+INSERT INTO `foodfficiency`.`items`(`id`,`userId`,`upc`,`name`,`expires`, `price`)VALUES(null, 3, '557848652149', "Bumblebee Tuna -2oz", "2018-05-02 08:25:22", 2.52);

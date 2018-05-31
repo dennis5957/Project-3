@@ -1,0 +1,92 @@
+.scan-container {
+    position: relative;
+}
+
+.loader {
+    position: absolute;
+    top: 5vh;
+    left: 30%;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    z-index: 100;
+}
+
+#mainContent {
+    width: 100%;
+}
+
+
+.scanner {
+    position: relative;
+    margin-top: 1vh;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 40vh;
+    min-width: 300px;
+    min-height: 300px;
+    border: 12px solid whitesmoke;
+    border-radius: 10px;
+}
+
+#productInfo {
+    width: 90%; 
+    margin-top: 1vh;
+    margin-left: 5%;
+}
+
+#productImage {    
+    margin-top: 1vh;
+    width: 30%;
+    margin-left: 35%;
+}
+
+input[type="text"], input[type="date"], input[type="number"] {
+    font-size: 1.3rem;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button {
+    font-size: 2.0rem;
+}
+
+@media screen and (orientation: landscape) {
+    
+    .loader {
+        top: 25vh;
+        left: 5vw;
+    }
+    
+    .scanner {
+        display: inline-block;
+        margin-top: 15vh;
+        margin-left: 20px;
+        border: 12px solid rgb(26, 24, 24);
+    }
+
+    #productInfo {
+        vertical-align: top;
+        margin-top: 10vh;
+        margin-left: 30px;
+        display:inline-block;
+        width: 45%;
+    }
+    
+    #myForm {
+        margin-top: 2vh;
+    }
+
+    #productImage {
+       display: block;
+       max-width: 200px;
+    }
+       
+    input[type="text"], input[type="date"] {
+        font-size: 1.5rem;
+        display: block;
+    }    
+
+}

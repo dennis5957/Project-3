@@ -1,0 +1,25 @@
+#welcomeMessage {
+    font-size: 2.0em;
+    font-weight: 200;
+}
+
+.food-money {
+    background-image: url("/assets/img/food-money.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 50%;
+    margin-left: 25%;
+    height: 40vh;   
+}
+
+@media only screen and (orientation: landscape) {
+    .food-money {
+        background-image: url("/assets/img/food-money.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: fixed;
+        width: 30%;
+        margin-left: 70%;
+        height: 25vh;   
+    }
+}

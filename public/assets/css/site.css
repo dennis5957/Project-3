@@ -1,0 +1,32 @@
+
+body {
+    background-color: var(--dark);
+    color: var(--light);
+    font-size: 12pt;
+}
+
+input[type="text"], input[type="date"], input[type="number"],
+input[type="email"], input[type="password"] {
+    font-size: 1.1rem;
+    margin:0;
+    padding:3px;
+}
+
+
+@media only screen and (max-width: 361px) {
+
+    body {
+        background-color: var(--dark);
+        color: var(--light);
+        font-size: 10pt;
+    }
+    
+    input[type="text"], input[type="date"], input[type="number"],
+    input[type="email"], input[type="password"] {
+        font-size: 0.8rem;
+        margin:0;
+        padding:2px;
+    }
+
+
+}

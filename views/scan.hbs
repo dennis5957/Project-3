@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{> head }}
+</head>
+
+<body>
+    <div id="mainContent">
+        {{> nav }}
+        <div class="scan-container">
+            <div class="loader">Loading....</div>
+            <div id="scandit-barcode-picker" class="scanner">
+
+            </div>
+        </div>
+        <div id="productInfo">
+            <form id="myForm">
+                <div class="form-group">
+                    <label for="barcodeResult">UPC</label>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <input type="number" class="form-control result-text" id="barcodeResult" placeholder="Waiting for UPC...">
+                            <div class="input-group-append">
+                                <button id="upcSubmitButton" type="button" class="btn">Go</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="productName">Product Name</label>
+                        <input type="text" class="form-control" id="productName" required placeholder="Waiting for name...">
+                    </div>
+                    <div class="row">
+                        <div class="col-8">
+                            <div class="form-group">
+                                <label for="expireDate">Expires</label>
+                                <input type="date" class="form-control" id="expireDate" required placeholder="Expire Date">
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form-group">
+                                <label for="price">Price</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">$</span>
+                                    </div>
+                                    <input type="number" class="form-control" min="0.00" value="0.00" step="0.01" title="Currency" required pattern="^\d+(?:\.\d{1,2})?$"
+                                        id="price">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br>
+                    <button id="submitButton" type="submit" class="btn btn-outline-light btn-lg btn-block">Submit</button>
+            </form>
+            </div>
+            <img id="productImage" src="assets/img/noimage.png" alt="product image" />
+        </div>
+        <script src="/scandit"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.1/moment.min.js"></script> {{> pagejs }}
+</body>
+
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{{> head }}
+    <script src="https://maps.googleapis.com/maps/api/js?key={{ googleMapsKey }}&libraries=places&callback=getLocation"
+    defer></script>
+</head>
+<body>
+    {{> header }}
+    <div id="map"></div>
+    
+    {{> footer }}
+    {{> pagejs }}
+</body>
+</html>

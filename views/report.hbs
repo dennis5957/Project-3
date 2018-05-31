@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{> head }}
+</head>
+
+<body>
+    {{> nav }}
+    <div class="container">
+        <form id="myForm">
+            <div id="instruction" class="row text-center">Check which items expire during a date range. Default is the past month.</div>
+
+            <div class="row p-3 bg-warning rounded">
+                <div class="col-6">
+                    <div class="form-group">
+                        <label for="startDate" class="text-dark text-lg">Start</label>
+                        <input type="date" class="form-control" id="startDate" required placeholder="Expire Date">
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="form-group">
+                        <label for="endDate" class="text-dark text-lg">End</label>
+                        <input type="date" class="form-control" id="endDate" required placeholder="Expire Date">
+                    </div>
+                </div>
+                <button id="goButton" type="submit" class="btn btn-lg btn-dark btn-block">Go</button>
+        </form>
+        </div>
+    </div>
+    <br>
+    <div id="itemList" class="container-fluid">
+    </div>
+    <div id="total" class="bg-warning text-dark rounded">$5.38</div>
+    {{> pagejs }}
+</body>
+
+</html>

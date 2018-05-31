@@ -1,0 +1,19 @@
+#total {
+    text-align: right;
+    font-size: 1.9rem;
+    width: fit-content;
+    position: fixed;
+    right: 10px;
+    bottom: 0;
+    padding: 5px;
+    z-index: 100; 
+    opacity: 0.6;   
+}
+
+#instruction {
+    font-size: 1.4rem;
+    font-weight: 200;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}

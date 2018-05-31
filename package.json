@@ -1,0 +1,29 @@
+{
+  "name": "foodficiency",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "mocha"
+  },
+  "keywords": [],
+  "author": "Dennis",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "dotenv": "^5.0.1",
+    "express": "^4.16.3",
+    "hbs": "^4.0.1",
+    "moment": "^2.22.1",
+    "mysql2": "^1.5.3",
+    "request": "^2.85.0",
+    "request-promise": "^4.2.2",
+    "scandit-sdk": "^2.4.1",
+    "sequelize": "^4.37.7"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0"
+  }
+}
